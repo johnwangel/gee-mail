@@ -1,0 +1,55 @@
+
+
+body {
+	font-family: arial, sans-serif;
+    background-color: #e1a9c2;
+}
+
+h1.main_title {
+	font-family: georgia, serif;
+	text-align: center;
+	color: #d64d61;
+	font-weight: bold;
+    font-size: 500%;
+    font-variant: all-caps;
+}
+
+
+h2 {
+	color: #764f6f;
+	text-align: center;
+}
+h3 {
+	color: blue;
+	text-align: center;
+}
+
+#bootstrap-overrides div.container {
+	border: 1px solid #764f6f;
+	background-color: #764f6f;
+}
+
+#bootstrap-overrides div.panel-group {
+	border: 1px solid #black;
+	background-color: #764f6f;
+}
+
+#bootstrap-overrides div.panel {
+	border: 1px solid #black;
+	background-color: #cac5ea;
+}
+
+#bootstrap-overrides div.panel-heading {
+	border: 1px solid #black;
+	background-color: #cac5ea;
+}
+
+#bootstrap-overrides div.panel-collapse {
+	border: 1px solid #black;
+	background-color: white;
+}
+
+ table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
