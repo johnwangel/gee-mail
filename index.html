@@ -1,18 +1,85 @@
+`<!DOCTYPE html>
 <html>
+<head>
+  <title>Gee Mail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/mail-generator.js"></script>
+  	<link href="css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <html>
 	<head>
-		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
-    <script>
-      window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+  <script language="javascript">
+
+        setInterval(
+          function(){
+            var newMess = getNewMessage();
+            var curr_no_of_emails = parseInt(document.getElementById('no_of_emails').innerText);
+            var html = makePanel(newMess.date, newMess.sender, newMess.date.subject, newMess.body, curr_no_of_emails);
+            var currText = document.getElementById('accordion').innerHTML;
+            html += currText;
+            insertHTML('accordion', html);
+            number_of_emails(curr_no_of_emails+1);
+            }, 10000
+          );
+
+            function makePanel(sDate, sSender, sSubject, sBody, s) {
+                  var html = '<div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse'
+                  j = s.toString()
+                  html += j
+                  html += '""><strong>Date:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                  html += sDate
+                  html += '<br/><strong>From:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                  html += sSender
+                  html += '<br/><strong>Subject:</strong>&nbsp;&nbsp;&nbsp;'
+                  html += sSubject
+                  html += '</a></h4></div><div id="collapse'
+                  html += j
+                  html += '" class="panel-collapse collapse"><div class="panel-body">'
+                  html += sBody
+                  html += '</div></div>'
+                  return html;
+            }
+
+            function createHTML(geemails) {
+                var html = '<div class="container"><div class="panel-group" id="accordion">'
+                for (var i = 0; i < geemails.length; i++){
+                  html += makePanel(geemails[i].date, geemails[i].sender, geemails[i].date.subject, geemails[i].body, i);
+                }
+                
+                html += '</div></div>';
+                return html;
+            }
+
+            function insertHTML(id, html) {
+                var el = document.getElementById(id); 
+                if(!el) {
+                    alert('Element with id ' + id + ' not found.');
+                }
+                el.innerHTML = html;
+            }
+
+            function run() {
+                var html = createHTML(geemails)
+                insertHTML('bodydata', html);
+                k = geemails.length.toString()
+                number_of_emails(k)
+            }
+
+            function number_of_emails(parm){
+              no_of_emails.innerText = parm;
+            }
+
+            window.onload = run
     </script>
-	</head>
-	<body>
-		<div class="container" id="main">
-			Build Me!
-		</div>
-	</body>
+</head>
+<body id="bootstrap-overrides">
+<div class="container"><div class="panel-group">'<div class="panel panel-default"><div class="panel-heading"><h1 class="main_title">❀ GEE MAIL ❀</h1>
+<h2>You have <span id="no_of_emails">1</span> emails</h2></div></div></div></div>
+
+<table class="center" id="bodydata"></table>
+
+</body>
 </html>
