@@ -2,34 +2,30 @@
 
 body {
 	font-family: arial, sans-serif;
-    background-color: #e1a9c2;
+    background-color: #136d11;
 }
 
 h1.main_title {
 	font-family: georgia, serif;
 	text-align: center;
-	color: #d64d61;
+	color: #136d11;
 	font-weight: bold;
     font-size: 72px;
 }
 
 h2 {
-	color: #764f6f;
-	text-align: center;
-}
-
-h3 {
-	color: blue;
+	color: black;
+	font-weight: bold;
 	text-align: center;
 }
 
 #bootstrap-overrides div.container {
-	border: 1px solid #764f6f;
-	background-color: #764f6f;
+	border: 1px solid #cdd9bb;
+	background-color: #cdd9bb;
 }
 
 #bootstrap-overrides div.panel-group {
-	background-color: #764f6f;
+	background-color: #cdd9bb;
 }
 
 #bootstrap-overrides div.panel {
@@ -37,13 +33,13 @@ h3 {
 }
 
 #bootstrap-overrides div.panel-heading {
-	border: 1px solid #dbb4da;
-	background-color: #cac5ea;
+	border: 1px solid #cdd9bb;
+	background-color: #799fb7;
 }
 
 #bootstrap-overrides div.panel-collapse {
-	border: 1px solid #dbb4da;
-	background-color: white;
+	border: 1px solid #759e36;
+	background-color: #cdd9bb;
 }
 
  table.center {
