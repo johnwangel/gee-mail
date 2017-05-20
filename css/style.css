@@ -10,15 +10,14 @@ h1.main_title {
 	text-align: center;
 	color: #d64d61;
 	font-weight: bold;
-    font-size: 500%;
-    font-variant: all-caps;
+    font-size: 72px;
 }
-
 
 h2 {
 	color: #764f6f;
 	text-align: center;
 }
+
 h3 {
 	color: blue;
 	text-align: center;
@@ -30,22 +29,20 @@ h3 {
 }
 
 #bootstrap-overrides div.panel-group {
-	border: 1px solid #black;
 	background-color: #764f6f;
 }
 
 #bootstrap-overrides div.panel {
-	border: 1px solid #black;
 	background-color: #cac5ea;
 }
 
 #bootstrap-overrides div.panel-heading {
-	border: 1px solid #black;
+	border: 1px solid #dbb4da;
 	background-color: #cac5ea;
 }
 
 #bootstrap-overrides div.panel-collapse {
-	border: 1px solid #black;
+	border: 1px solid #dbb4da;
 	background-color: white;
 }
 
